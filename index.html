@@ -116,7 +116,7 @@
         $("#amiibo_table tbody").append(createRow(item));
       }
 
-      $('#' + item.id + ' .time span').text(moment(item.time).fromNow());
+      $('#' + item.id + ' .time span').text(moment(item.time).format("LLL"));
 
       item.stores.forEach(function(store){
 
@@ -140,7 +140,7 @@
       '<tr id="' + item.id + '">' +
         '<td class="mdl-data-table__cell--non-numeric name">' +
           '<div><span class="item-name" >'+ item.name +'</span><div>' +
-          '<div><span class="time"><i class="fa fa-clock-o"></i>  '+ moment(item.time).format("LLL") +'</span><div>' +
+          '<div class="time"><i class="fa fa-clock-o"></i>  <span>'+ moment(item.time).format("LLL") +'</span><div>' +
           '</td>' +
             '<td class="stores">' +
               '<div>' +
