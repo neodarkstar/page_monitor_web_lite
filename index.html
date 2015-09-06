@@ -125,7 +125,7 @@
         if(store.available){
           row.find(storeInfo[store.api].tag).css('color',storeInfo[store.api].color)
         } else {
-          row.find(storeInfo[store.api].tag).css('color','inherit');
+          row.find(storeInfo[store.api].tag).css('color','none');
         }
 
         row.find('.' + store.api).attr('href', store.url);
